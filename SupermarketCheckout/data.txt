@@ -1,0 +1,8 @@
+1,Iphone 13,1050.0
+2,Twix,1.55
+3,PS4,125.0
+4,PS5,200.99
+5,Macbook,1000.0
+6,CocaCola,0.50
+7,Pizza,5.50
+8,Water,0.20
