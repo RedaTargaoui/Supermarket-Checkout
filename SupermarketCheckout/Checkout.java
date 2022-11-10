@@ -1,8 +1,8 @@
 
 /**
- * Title : Supermarket checkout program
- * Author : Reda Targaoui
- * Date : 23/05/2022
+ * @brief : Supermarket checkout program
+ * @author : Reda Targaoui
+ * @date : 23/05/2022
  */
 
 package SupermarketCheckout;
@@ -14,25 +14,35 @@ public class Checkout {
 	private ArrayList<Product> products; // Array to stock every product chosen by the user
 	private double totalPrice; // The total price of the chosen products
 	
-	// Constructor :
+	/**
+	  * @brief Constructor 
+	*/
 	public Checkout() {
 		products = new ArrayList<Product>();
 		this.totalPrice = 0;
 	}
 	
-	// add product :
+	/**
+	  * @brief Add a product to the list
+	  * @param Product p
+	*/
 	public void Add(Product p) {
 		products.add(p);
 		this.totalPrice += p.getPrice();
 	}
 	
-	// delete product :
+	/**
+	  * @brief Delete product from the list 
+	  * @param Product p
+	*/
 	public void delete(Product p) {
 		products.remove(p);
 		this.totalPrice -= p.getPrice();
 	}
 	
-	// Display the bill :
+	/**
+	  * @brief Display list
+	*/
 	public void Display() {
 		System.out.println("---------------------------- The Checkout --------------------------- ");
 		System.out.printf("%-6s%-20s%6s\n", "ID", "Name", "Price");
