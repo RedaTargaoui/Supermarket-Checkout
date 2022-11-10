@@ -1,8 +1,8 @@
 
 /**
- * Title : Supermarket checkout program
- * Author : Reda Targaoui
- * Date : 23/05/2022
+ * @brief : Supermarket checkout program
+ * @author : Reda Targaoui
+ * @date : 23/05/2022
  */
 
 package SupermarketCheckout;
@@ -10,6 +10,10 @@ package SupermarketCheckout;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+
+/**
+  * @brief test the programm
+*/
 
 public class Main {
 	public static void main(String[] args) throws NumberFormatException, IOException {
