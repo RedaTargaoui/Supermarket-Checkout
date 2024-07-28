@@ -2,9 +2,7 @@
  * Represents the shopping cart class
  * @author Reda TARGAOUI
  */
-package com.supermarketcheckout.Controller;
-
-import com.supermarketcheckout.Model.Product;
+package com.supermarketcheckout.Model;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -6,6 +6,7 @@ package com.supermarketcheckout.Controller;
 
 import com.supermarketcheckout.Main;
 import com.supermarketcheckout.Model.Product;
+import com.supermarketcheckout.Model.ShoppingCart;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
