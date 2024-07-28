@@ -27,7 +27,6 @@ public class HomeViewController {
     // Attributes:
     private ShoppingCart shoppingCart;
     private List<Product> products;
-    public static boolean isLoggedIn = false;
     // JavaFX components:
     private Stage stage;
     @FXML
@@ -51,10 +50,9 @@ public class HomeViewController {
      * Initialize scene
      * @param stage stage
      * @param products products list
-     * @return HomeViewController
      * @throws IOException IOException
      */
-    public static HomeViewController initScene(Stage stage, List<Product> products) throws IOException {
+    public static void initScene(Stage stage, List<Product> products) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("View/Home-view.fxml"));
         Parent root = fxmlLoader.load();
 
@@ -73,8 +71,6 @@ public class HomeViewController {
         stage.setScene(scene);
 
         controller.GridPane.requestFocus();
-
-        return controller;
     }
 
     /**
@@ -166,19 +162,7 @@ public class HomeViewController {
      */
     @FXML
     private void adminButtonEvent() throws IOException {
-        if (!isLoggedIn) {
-            AdminLoginViewController.initScene();
-        } else {
-            System.out.println("Already logged in");
-        }
-    }
-
-    /**
-     * Get stage
-     * @return stage
-     */
-    public Stage getStage() {
-        return stage;
+        AdminLoginViewController.initScene(this.stage, this.products);
     }
 
     /**
