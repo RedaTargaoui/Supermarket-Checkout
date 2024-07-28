@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="690.0" prefWidth="932.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.supermarketcheckout.Controller.HomeViewController">
+   <children>
+      <GridPane fx:id="GridPane" prefHeight="690.0" prefWidth="972.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="776.1999206542969" minWidth="10.0" prefWidth="452.39996948242185" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="485.5999938964843" minWidth="9.800079345703125" prefWidth="479.20003051757806" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="172.19998779296876" minHeight="0.0" prefHeight="41.4" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="433.2" minHeight="10.0" prefHeight="49.4" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="533.6000061035156" minHeight="10.0" prefHeight="533.6000061035156" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="451.20000610351565" minHeight="10.0" prefHeight="63.19997558593752" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="adminButton" mnemonicParsing="false" onAction="#adminButtonEvent" prefHeight="38.0" prefWidth="155.0" style="-fx-background-color: #3393FF;" text="Admin view" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+            <TableView fx:id="productsTable" onMouseClicked="#productSelection" prefHeight="453.0" prefWidth="383.0" GridPane.rowIndex="2">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="212.8000122308731" text="Product" />
+                <TableColumn fx:id="priceColumn" minWidth="0.0" prefWidth="220.0" text="Price" />
+              </columns>
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </TableView>
+            <Label fx:id="title1" alignment="CENTER" contentDisplay="CENTER" text="List of all the products : " GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="title2" text="The selected products : " GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <TableView fx:id="selectedProductsTable" prefHeight="379.0" prefWidth="383.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+              <columns>
+                <TableColumn fx:id="selectedProductNameColumn" prefWidth="224.80001527071" text="Product" />
+                <TableColumn fx:id="selectedProductPriceColumn" prefWidth="232.0000762939453" text="Price" />
+              </columns>
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </TableView>
+            <Label fx:id="totalPriceLabel" prefHeight="18.0" prefWidth="171.0" text="Total price: 0.0 €" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Arial Bold Italic" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="40.0" />
+               </GridPane.margin>
+            </Label>
+            <Button fx:id="purchaseButton" mnemonicParsing="false" onAction="#purchaseButtonEvent" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #3393FF;" text="Purchase" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="40.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</VBox>
