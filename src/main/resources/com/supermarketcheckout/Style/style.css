@@ -5,3 +5,23 @@
 .button:hover {
     -fx-background-color: #0465d1;
 }
+
+
+
+.tableButton {
+    -fx-background-color: #37AEE2;
+}
+
+.tableButton:hover {
+    -fx-background-color: #3393FF;
+}
+
+
+
+#submitButton {
+    -fx-background-color: #3393FF;
+}
+
+#submitButton:hover {
+    -fx-background-color: #0465d1;
+}
