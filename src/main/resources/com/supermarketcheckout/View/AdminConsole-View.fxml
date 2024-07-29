@@ -50,6 +50,27 @@
                   <Font name="Arial Bold Italic" size="14.0" />
                </font>
             </Label>
+            <Button fx:id="deleteProductButton" mnemonicParsing="false" onAction="#deleteProductButtonOnAction" styleClass="tableButton" stylesheets="@../Style/style.css" text="Delete Product" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="50.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="editProductButton" mnemonicParsing="false" onAction="#editProductButtonOnAction" styleClass="tableButton" stylesheets="@../Style/style.css" text="Edit Product" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="addProductButton" mnemonicParsing="false" onAction="#addProductButtonOnAction" styleClass="tableButton" stylesheets="@../Style/style.css" text="Add product" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="50.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
          </children>
       </GridPane>
    </children>

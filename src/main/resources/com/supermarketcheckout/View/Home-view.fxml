@@ -25,7 +25,7 @@
             <RowConstraints maxHeight="451.20000610351565" minHeight="10.0" prefHeight="63.19997558593752" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="adminButton" mnemonicParsing="false" onAction="#adminButtonEvent" prefHeight="38.0" prefWidth="155.0" stylesheets="@../Style/style.css" text="Admin view" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+            <Button fx:id="adminButton" mnemonicParsing="false" onAction="#adminButtonEvent" prefHeight="38.0" prefWidth="155.0" stylesheets="@../Style/style.css" text="Admin console" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                <GridPane.margin>
                   <Insets right="20.0" />
                </GridPane.margin>
