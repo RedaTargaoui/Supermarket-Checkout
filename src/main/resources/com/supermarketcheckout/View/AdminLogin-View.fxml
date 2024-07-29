@@ -23,7 +23,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="enterButton" mnemonicParsing="false" onAction="#login" prefHeight="38.0" prefWidth="335.0" style="-fx-background-color: #3393FF;" text="Enter" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <Button fx:id="enterButton" mnemonicParsing="false" onAction="#login" prefHeight="38.0" prefWidth="335.0" stylesheets="@../Style/style.css" text="Enter" textFill="WHITE" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets bottom="50.0" />
                </GridPane.margin>

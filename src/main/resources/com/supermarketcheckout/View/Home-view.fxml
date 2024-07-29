@@ -25,7 +25,7 @@
             <RowConstraints maxHeight="451.20000610351565" minHeight="10.0" prefHeight="63.19997558593752" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="adminButton" mnemonicParsing="false" onAction="#adminButtonEvent" prefHeight="38.0" prefWidth="155.0" style="-fx-background-color: #3393FF;" text="Admin view" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
+            <Button fx:id="adminButton" mnemonicParsing="false" onAction="#adminButtonEvent" prefHeight="38.0" prefWidth="155.0" stylesheets="@../Style/style.css" text="Admin view" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT">
                <GridPane.margin>
                   <Insets right="20.0" />
                </GridPane.margin>
@@ -69,7 +69,7 @@
                   <Insets left="40.0" />
                </GridPane.margin>
             </Label>
-            <Button fx:id="purchaseButton" mnemonicParsing="false" onAction="#purchaseButtonEvent" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #3393FF;" text="Purchase" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+            <Button fx:id="purchaseButton" mnemonicParsing="false" onAction="#purchaseButtonEvent" prefHeight="26.0" prefWidth="112.0" stylesheets="@../Style/style.css" text="Purchase" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets right="40.0" />
                </GridPane.margin>

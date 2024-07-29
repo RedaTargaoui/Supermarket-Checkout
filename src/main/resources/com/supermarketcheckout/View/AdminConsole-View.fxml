@@ -32,7 +32,7 @@
                 <TableColumn fx:id="productPriceColumn" prefWidth="314.3999938964844" text="Price" />
               </columns>
             </TableView>
-            <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#goBackButtonOnAction" prefHeight="38.0" prefWidth="155.0" style="-fx-background-color: #3393FF;" text="Go back" textFill="WHITE">
+            <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#goBackButtonOnAction" prefHeight="38.0" prefWidth="155.0" stylesheets="@../Style/style.css" text="Go back" textFill="WHITE">
                <font>
                   <Font name="Arial" size="14.0" />
                </font>
