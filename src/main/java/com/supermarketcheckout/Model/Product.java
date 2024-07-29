@@ -8,10 +8,16 @@ import java.io.Serializable;
 
 public class Product implements Serializable {
 	// Attributes :
-	private final int id;
-	private final String name;
-	private final double price;
+	private int id;
+	private String name;
+	private double price;
 
+	/**
+	 * Initialize object
+	 */
+	public Product() {
+		this.id = 0;
+	}
 
 	/**
 	 * Initialize object
@@ -34,6 +40,14 @@ public class Product implements Serializable {
 	}
 
 	/**
+	 * Set product id
+	 * @param id id
+	 */
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	/**
 	 * Get product name
 	 * @return product name
 	 */
@@ -42,10 +56,26 @@ public class Product implements Serializable {
 	}
 
 	/**
+	 * Set name
+	 * @param name name
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
 	 * Get product price
 	 * @return product price
 	 */
 	public double getPrice() {
 		return this.price;
+	}
+
+	/**
+	 * Set price
+	 * @param price price
+	 */
+	public void setPrice(double price) {
+		this.price = price;
 	}
 }
