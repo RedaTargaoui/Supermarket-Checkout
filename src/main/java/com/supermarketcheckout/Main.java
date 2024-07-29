@@ -6,6 +6,7 @@ import com.supermarketcheckout.Controller.HomeViewController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.List;
 
 public class Main extends Application {
@@ -27,7 +28,7 @@ public class Main extends Application {
 		stage.show();
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// Check DATA dir existence:
 		DataHandler.checkDataDirExistence();
 

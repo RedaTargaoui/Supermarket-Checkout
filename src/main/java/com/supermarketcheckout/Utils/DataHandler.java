@@ -7,6 +7,7 @@ package com.supermarketcheckout.Utils;
 import com.supermarketcheckout.Model.Product;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class DataHandler {
@@ -30,7 +31,7 @@ public class DataHandler {
             if (!dataDir.mkdirs()) {
                 System.err.println("->Couldn't create data directory!");
             }
-            System.err.println("->Data directory created successfully!");
+            System.out.println("->Data directory created successfully!");
         }
     }
 
@@ -54,6 +55,16 @@ public class DataHandler {
     @SuppressWarnings("unchecked")
     public static List<Product> readProductsFromFile() throws IOException, ClassNotFoundException {
         File file = new File(DATA_DIR + PRODUCTS_DATA_FILE);
+        // Check if file doesn't exist:
+        if (!file.exists()) {
+            System.err.println("->Data file does not exist!");
+            // Create file:
+            if (!file.createNewFile()) {
+                System.err.println("->Couldn't create data file!");
+            }
+            System.out.println("->Data file created successfully!");
+            return new ArrayList<Product>();
+        }
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
             return (List<Product>) ois.readObject();
         }
