@@ -143,18 +143,26 @@ public class HomeViewController {
      */
     @FXML
     private void purchaseButtonEvent() {
-        // Show a confirmation dialog :
-        Alert paidAlert = new Alert(Alert.AlertType.INFORMATION);
-        paidAlert.setTitle("Payment Confirmation");
-        paidAlert.setHeaderText(null);
-        paidAlert.setContentText("Purchased successfully");
-        paidAlert.setGraphic(null);
-        // Show the dialog :
-        paidAlert.showAndWait();
-        // Clear shoppingCart, selected products table and total price label :
-        this.shoppingCart.clearShoppingCart();
-        this.selectedProductsTable.setItems(FXCollections.observableArrayList(this.shoppingCart.getProducts()));
-        this.totalPriceLabel.setText(String.format("Total price: %.2f€", this.shoppingCart.getTotalPrice()));
+        if (this.shoppingCart.getProducts().isEmpty()) {
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+            errorAlert.setTitle("Error");
+            errorAlert.setHeaderText(null);
+            errorAlert.setContentText("Your shopping cart is empty!");
+            errorAlert.showAndWait();
+        } else {
+            // Show a confirmation dialog :
+            Alert paidAlert = new Alert(Alert.AlertType.INFORMATION);
+            paidAlert.setTitle("Payment Confirmation");
+            paidAlert.setHeaderText(null);
+            paidAlert.setContentText("Purchased successfully");
+            paidAlert.setGraphic(null);
+            // Show the dialog :
+            paidAlert.showAndWait();
+            // Clear shoppingCart, selected products table and total price label :
+            this.shoppingCart.clearShoppingCart();
+            this.selectedProductsTable.setItems(FXCollections.observableArrayList(this.shoppingCart.getProducts()));
+            this.totalPriceLabel.setText(String.format("Total price: %.2f€", this.shoppingCart.getTotalPrice()));
+        }
     }
 
     /**
