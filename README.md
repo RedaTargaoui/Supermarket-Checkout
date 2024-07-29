@@ -1,34 +1,28 @@
 # Supermarket Checkout App
 
-This is a simple Supermarket Checkout App implemented in Java, following the Model-View-Controller (MVC) design pattern.
+This is a simple Supermarket Checkout App implemented in Java, following the Model-View-Controller 
+(MVC) design pattern, and a graphical user interface.
 
 ## Overview
 
-The app consists of the following classes:
+The app consists of 2 principal views, **Home view** which shows all the products and user can select 
+the products he wants and then pay at the end, **Admin Console view** where an admin can log in and 
+can add product, edit product and delete a product.
+
+## Files:
+
+The app consists of the following principal classes:
 
 - **Product.java**: Represents a product with attributes such as ID, name, and price.
 
-- **DataGetter.java**: Retrieves product data from a MySQL database using Connector/J.
-
-- **GUI.java**: Creates the graphical user interface (GUI) for the application using JavaFX.
+- **DataHandler.java**: Handles data reading and writing into data file
 
 - **ShoppingCart.java**: Handles user-selected products, allowing for adding or removing products, and calculates the total price.
 
-## MVC Pattern
+- **Controllers**: FXML Views controllers
 
-The application follows the MVC design pattern:
+## Used
 
-- **Model**:
-  - **Product.java**: Represents the data structure for products.
-  - **DataGetter.java**: Retrieves product data from the database.
-
-- **View**:
-  - **GUI.java**: Implements the graphical user interface using JavaFX.
-
-- **Controller**:
-  - **ShoppingCart.java**: Controls the interaction between the model and the view. Handles user input, updates the model, and refreshes the view accordingly.
-
-## Used Libraries
-
-- **JavaFX**: Used for creating the graphical user interface.
-- **Connector/J**: Used for MySQL database connectivity.
+- **Java 17**
+- **JavaFX**.
+- **SceneBuilder**.
