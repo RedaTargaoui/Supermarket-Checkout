@@ -191,7 +191,11 @@ public class AdminConsoleViewController {
                     product.setName(newName);
                     product.setPrice(Double.parseDouble(newPrice));
                     if (objective.equals("add")) {
-                        product.setId(this.products.get(this.products.size() - 1).getId() + 1);
+                        if (this.products.isEmpty()) {
+                            product.setId(1);
+                        } else {
+                            product.setId(this.products.get(this.products.size() - 1).getId() + 1);
+                        }
                         this.products.add(product);
                         // Update number of products label:
                         this.nbProductsLabel.setText("Number of products : " + this.products.size());
